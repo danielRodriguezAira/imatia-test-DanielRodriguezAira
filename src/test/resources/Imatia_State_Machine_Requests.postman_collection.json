@@ -1,0 +1,95 @@
+{
+	"info": {
+		"_postman_id": "6855c81b-a3f1-446b-8508-d9da5e21b93c",
+		"name": "Imatia State Machine Requests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Send Json",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"orderTrackings\": [\n        {\n            \"orderId\": 230688716,\n            \"trackingStatusId\": 1,\n            \"changeStatusDate\": \"2021-02-24T10:30:30.000+01:00\"\n        },\n        {\n            \"orderId\": 230688717,\n            \"trackingStatusId\": 2,\n            \"changeStatusDate\": \"2021-02-24T10:30:30.000+01:00\"\n        },\n        {\n            \"orderId\": 230688718,\n            \"trackingStatusId\": 3,\n            \"changeStatusDate\": \"2021-02-24T10:30:30.000+01:00\"\n        }\n    ]\n}"
+				},
+				"url": {
+					"raw": "http://localhost:6080/order/tracking/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6080",
+					"path": [
+						"order",
+						"tracking",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Send XML",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<orderTrackings>\n    <orderTracking>\n        <orderId>230688716</orderId>\n        <trackingStatusId>1</trackingStatusId>\n        <changeStatusDate>2021-02-24T10:30:30.000+01:00</changeStatusDate>\n    </orderTracking>\n    <orderTracking>\n        <orderId>230688717</orderId>\n        <trackingStatusId>2</trackingStatusId>\n        <changeStatusDate>2021-02-24T10:30:30.000+01:00</changeStatusDate>\n    </orderTracking>\n    <orderTracking>\n        <orderId>230688718</orderId>\n        <trackingStatusId>3</trackingStatusId>\n        <changeStatusDate>2021-02-24T10:30:30.000+01:00</changeStatusDate>\n    </orderTracking>\n</orderTrackings>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:6080/order/tracking/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6080",
+					"path": [
+						"order",
+						"tracking",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actuators Server",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:6081/actuator",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6081",
+					"path": [
+						"actuator"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
