@@ -49,7 +49,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "<orderTrackings>\n    <orderTracking>\n        <orderId>230688716</orderId>\n        <trackingStatusId>1</trackingStatusId>\n        <changeStatusDate>2021-02-24T10:30:30.000+01:00</changeStatusDate>\n    </orderTracking>\n    <orderTracking>\n        <orderId>230688717</orderId>\n        <trackingStatusId>2</trackingStatusId>\n        <changeStatusDate>2021-02-24T10:30:30.000+01:00</changeStatusDate>\n    </orderTracking>\n    <orderTracking>\n        <orderId>230688718</orderId>\n        <trackingStatusId>3</trackingStatusId>\n        <changeStatusDate>2021-02-24T10:30:30.000+01:00</changeStatusDate>\n    </orderTracking>\n</orderTrackings>",
+					"raw": "<UpdateOrderTrackingRequest>\n <orderTrackings>\n    <orderTracking>\n        <orderId>230688716</orderId>\n        <trackingStatusId>1</trackingStatusId>\n        <changeStatusDate>2021-02-24T10:30:30.000+01:00</changeStatusDate>\n    </orderTracking>\n    <orderTracking>\n        <orderId>230688717</orderId>\n        <trackingStatusId>2</trackingStatusId>\n        <changeStatusDate>2021-02-24T10:30:30.000+01:00</changeStatusDate>\n    </orderTracking>\n    <orderTracking>\n        <orderId>230688718</orderId>\n        <trackingStatusId>3</trackingStatusId>\n        <changeStatusDate>2021-02-24T10:30:30.000+01:00</changeStatusDate>\n    </orderTracking>\n</orderTrackings>\n</UpdateOrderTrackingRequest>",
 					"options": {
 						"raw": {
 							"language": "xml"
