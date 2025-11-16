@@ -1,0 +1,7 @@
+CREATE TABLE order_tracking (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    order_id VARCHAR(255) NOT NULL,
+    status VARCHAR(255) NOT NULL,
+    change_status_date TIMESTAMP NOT NULL,
+    creation_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);

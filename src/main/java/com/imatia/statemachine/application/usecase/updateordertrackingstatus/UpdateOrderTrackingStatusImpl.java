@@ -40,7 +40,7 @@ public class UpdateOrderTrackingStatusImpl implements UpdateOrderTrackingStatus 
             try {
                 OrderTracking orderTracking = orderTrackingMapper.toDomain(orderTrackingDTO);
                 updateOrderTrackingValidator.validate(orderTracking);
-                OrderTracking persistedOrderTracking = orderTrackingRepository.save(orderTracking);
+                OrderTracking persistedOrderTracking = orderTrackingRepository.saveAndFlush(orderTracking);
                 OrderTrackingDTO orderTrackingDTOResult = orderTrackingMapper.toDTO(persistedOrderTracking);
                 results.add(new UpdateOrderTrackingResultDTO(orderTrackingDTOResult));
             } catch (OrderTrackingException ex) {

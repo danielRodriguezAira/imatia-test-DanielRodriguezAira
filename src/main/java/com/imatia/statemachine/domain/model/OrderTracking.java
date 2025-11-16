@@ -29,4 +29,6 @@ public class OrderTracking {
     private OrderTrackingStatus status;
     @Column(name = "change_status_date", nullable = false)
     private Date changeStatusDate;
+    @Column(name = "creation_date", nullable = false)
+    private Date creationDate = new Date();
 }
