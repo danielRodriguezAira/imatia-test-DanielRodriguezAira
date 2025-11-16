@@ -8,6 +8,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
 import java.util.List;
 
 /**
@@ -21,6 +22,7 @@ import java.util.List;
 public class UpdateOrderTrackingRequestDTO {
 
     @Valid
+    @NotNull(message = "Order trackings are required")
     @JacksonXmlProperty(localName = "orderTrackings")
     private List<OrderTrackingDTO> orderTrackings;
 }

@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.validation.groups.Default;
+
 @Log4j2
 @RestController
 @RequestMapping("/order/tracking")
@@ -28,7 +30,7 @@ public class OrderTrackingRestController {
             produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE}
     )
     public UpdateOrderTrackingResponseDTO updateOrderTracking(
-            @RequestBody @Validated UpdateOrderTrackingRequestDTO request,
+            @RequestBody @Validated(Default.class) UpdateOrderTrackingRequestDTO request,
             BindingResult result) {
         if(result.hasErrors()) {
             log.error(result.getAllErrors());
